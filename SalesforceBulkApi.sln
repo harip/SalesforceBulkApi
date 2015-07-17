@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulkApiTests", "BulkApiTests\BulkApiTests.csproj", "{180302DC-5F10-4093-AF09-CEECFDD40FAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulkApi", "BulkApi\BulkApi.csproj", "{B6DF05A6-4168-4445-AE72-A88DAC0B98BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{180302DC-5F10-4093-AF09-CEECFDD40FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180302DC-5F10-4093-AF09-CEECFDD40FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180302DC-5F10-4093-AF09-CEECFDD40FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180302DC-5F10-4093-AF09-CEECFDD40FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6DF05A6-4168-4445-AE72-A88DAC0B98BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6DF05A6-4168-4445-AE72-A88DAC0B98BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6DF05A6-4168-4445-AE72-A88DAC0B98BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6DF05A6-4168-4445-AE72-A88DAC0B98BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

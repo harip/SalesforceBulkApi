@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6DF05A6-4168-4445-AE72-A88DAC0B98BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BulkApi</RootNamespace>
+    <AssemblyName>BulkApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiWebClient\BulkApiWebClientFactory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ApiWebClient\IWebClient.cs" />
+    <Compile Include="Authentication\AuthenticationClient.cs" />
+    <Compile Include="Authentication\ForceAuthException.cs" />
+    <Compile Include="Authentication\ForceException.cs" />
+    <Compile Include="Authentication\IAuthenticationClient.cs" />
+    <Compile Include="Authentication\IForceException.cs" />
+    <Compile Include="BulkApiTasks\UpsertData\UpsertDataTask.cs" />
+    <Compile Include="BulkApiTasks\UpsertData\UpsertDataTaskModel.cs" />
+    <Compile Include="BulkApi\BulkApiCalls.cs" />
+    <Compile Include="BulkApi\BulkApiDataHelper.cs" />
+    <Compile Include="BulkApi\IBulkApiCalls.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\Utf8StringWriter.cs" />
+    <Compile Include="Models\AuthErrorResponse.cs" />
+    <Compile Include="Models\AuthToken.cs" />
+    <Compile Include="Models\BatchData.cs" />
+    <Compile Include="Models\BatchInfo.cs" />
+    <Compile Include="Models\BatchResult.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\JobInfo.cs" />
+    <Compile Include="Models\ResultList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
